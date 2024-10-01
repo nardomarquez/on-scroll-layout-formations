@@ -9,28 +9,150 @@
   <body>
     <div id="app">
       <main>
-        <header>
-          <h1>Marlen Stahlhuth</h1>
+        <header class="header">
+          <nav class="header__nav">
+            <a href="/" class="header__logo">
+              <p>Marlen Stahlhuth</p>
+            </a>
+
+            <ul class="header__menu">
+              <li><a href="#about">About</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+            </ul>
+          </nav>
         </header>
-        <section class="content content--full content--padded">
-          <div class="grid grid--spaced" data-grid-first>
-            <div class="grid__img pos-1" style="background-image: url(images/39.jpg)"></div>
-            <div class="grid__img pos-2" style="background-image: url(images/38.jpg)"></div>
-            <div class="grid__img pos-3" style="background-image: url(images/37.jpg)"></div>
-            <div class="grid__img pos-4" style="background-image: url(images/36.jpg)"></div>
-            <div class="grid__img pos-5" style="background-image: url(images/35.jpg)"></div>
-            <div class="grid__img pos-6" style="background-image: url(images/6.jpg)"></div>
-            <div class="grid__img pos-7" style="background-image: url(images/7.jpg)"></div>
-            <div class="grid__img pos-8" style="background-image: url(images/8.jpg)"></div>
-            <div class="grid__img pos-9" style="background-image: url(images/9.jpg)"></div>
-            <div class="grid__img pos-10" style="background-image: url(images/1.jpg)"></div>
-            <div class="grid__img pos-11" style="background-image: url(images/2.jpg)"></div>
-            <div class="grid__img pos-12" style="background-image: url(images/3.jpg)"></div>
-            <div class="grid__img pos-13" style="background-image: url(images/4.jpg)"></div>
-            <div class="grid__img pos-14" style="background-image: url(images/5.jpg)"></div>
-            <div class="grid__img pos-15" style="background-image: url(images/34.jpg)"></div>
-            <div class="grid__img pos-16" style="background-image: url(images/16.jpg)"></div>
-            <div class="grid__img pos-17" style="background-image: url(images/17.jpg)"></div>
+
+        <section id="hero" class="hero content content--full">
+          <h1 class="hero__title justified-text">Marlen Stahlhuth</h1>
+        </section>
+
+        <section id="about" class="about content">
+          <div class="about__wrapper">
+            <h2 class="section__title">About</h2>
+
+            <p class="about__desc indented">
+              I'm all about capturing moments that break the mold. My photography is raw,
+              unapologetic, and a little offbeat—just like life. I thrive on the imperfect, the
+              in-between, and the unexpected. Whether I'm shooting for a brand, a portrait, or
+              creating my own art, I aim to push boundaries and provoke thought. Photography is my
+              way of challenging the status quo and turning everyday moments into bold statements.
+            </p>
+          </div>
+        </section>
+
+        <section id="portfolio" class="portfolio content">
+          <div class="portfolio__wrapper">
+            <h2 class="section__title">Works</h2>
+
+            <ul class="portfolio__list">
+              <li class="portfolio__item">
+                <article class="portfolio__item__wrapper">
+                  <img src="images/2.jpg" alt="Portfolio item 1" class="portfolio__item__image" />
+                  <h3 class="portfolio__item__title">Item 1</h3>
+                </article>
+              </li>
+
+              <li class="portfolio__item">
+                <article class="portfolio__item__wrapper">
+                  <img src="images/1.jpg" alt="Portfolio item 2" class="portfolio__item__image" />
+                  <h3 class="portfolio__item__title">Item 2</h3>
+                </article>
+              </li>
+
+              <li class="portfolio__item">
+                <article class="portfolio__item__wrapper">
+                  <img src="images/10.jpg" alt="Portfolio item 3" class="portfolio__item__image" />
+                  <h3 class="portfolio__item__title">Item 3</h3>
+                </article>
+              </li>
+
+              <li class="portfolio__item">
+                <article class="portfolio__item__wrapper">
+                  <img src="images/9.jpg" alt="Portfolio item 4" class="portfolio__item__image" />
+                  <h3 class="portfolio__item__title">Item 4</h3>
+                </article>
+              </li>
+              
+              <li class="portfolio__item">
+                <article class="portfolio__item__wrapper">
+                  <img src="images/2.jpg" class="portfolio__item__image" alt="Portfolio item 5" />
+                  <h3 class="portfolio__item__title">Item 5</h3>
+                </article>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="services" class="services content">
+          <div class="services__wrapper">
+            <h2 class="section__title">Services</h2>
+
+            <ul class="services__list">
+              <li class="service__item">
+                <h3>Visual Stories</h3>
+                <p>
+                  Capture moments that matter. We turn your vision into striking imagery that
+                  resonates beyond the frame.
+                </p>
+              </li>
+
+              <li class="service__item">
+                <h3>Brand Identity</h3>
+                <p>
+                  Elevate your brand with photos that communicate your edge, voice, and vibe—distinct,
+                  powerful, and unforgettable.
+                </p>
+              </li>
+
+              <li class="service__item">
+                <h3>Editorial Edge</h3>
+                <p>
+                  Dynamic photography for editorials that push boundaries and challenge the status
+                  quo, ensuring your content stands out.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="gallery" class="gallery content">
+          <div class="gallery__wrapper">
+            <h2 class="section__title">Gallery</h2>
+          
+            <div class="gallery__grid" data-grid-first>
+              <div class="gallery__grid__img pos-1" style="background-image:url(images/39.jpg)"></div>
+              <div class="gallery__grid__img pos-2" style="background-image:url(images/38.jpg)"></div>
+              <div class="gallery__grid__img pos-3" style="background-image:url(images/37.jpg)"></div>
+              <div class="gallery__grid__img pos-4" style="background-image:url(images/36.jpg)"></div>
+              <div class="gallery__grid__img pos-5" style="background-image:url(images/35.jpg)"></div>
+              <div class="gallery__grid__img pos-6" style="background-image:url(images/6.jpg)"></div>
+              <div class="gallery__grid__img pos-7" style="background-image:url(images/7.jpg)"></div>
+              <div class="gallery__grid__img pos-8" style="background-image:url(images/8.jpg)"></div>
+              <div class="gallery__grid__img pos-9" style="background-image:url(images/9.jpg)"></div>
+              <div class="gallery__grid__img pos-10" style="background-image:url(images/1.jpg)"></div>
+              <div class="gallery__grid__img pos-11" style="background-image:url(images/11.jpg)"></div>
+              <div class="gallery__grid__img pos-12" style="background-image:url(images/3.jpg)"></div>
+              <div class="gallery__grid__img pos-13" style="background-image:url(images/4.jpg)"></div>
+              <div class="gallery__grid__img pos-14" style="background-image:url(images/5.jpg)"></div>
+              <div class="gallery__grid__img pos-15" style="background-image:url(images/18.jpg)"></div>
+              <div class="gallery__grid__img pos-16" style="background-image:url(images/16.jpg)"></div>
+              <div class="gallery__grid__img pos-17" style="background-image:url(images/17.jpg)"></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="contact content">
+          <div class="contact__wrapper">
+            <h2 class="section__title">Contact</h2>
+            <h3 class="contact__cta justified-text">Let's work</h3>
+
+            <div class="contact__gallery">
+              <div class="contact__gallery__img" style="background-image:url(images/1.jpg)"></div>
+              <div class="contact__gallery__img" style="background-image:url(images/2.jpg)"></div>
+            </div>
+
+            <button class="contact__button">Contact</button>
           </div>
         </section>
       </main>
