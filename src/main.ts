@@ -54,10 +54,33 @@ const animateHero = () => {
   });
 };
 
+const animatePortfolioList = () => {
+  const section = document.querySelector(".portfolio")!;
+  const portfolioItems = document.querySelectorAll(".portfolio__item");
+
+  gsap
+    .timeline({
+      defaults: { ease: "power3" },
+      scrollTrigger: {
+        trigger: section,
+        start: "top top",
+        end: "+=200%",
+        pin: section as HTMLElement,
+        scrub: 0.5,
+      },
+    })
+    .from(portfolioItems, {
+      y: window.innerHeight,
+      stagger: {
+        from: "center",
+        each: 0.05,
+      },
+    });
+};
+
 const animateGalleryGrid = () => {
-  const wrapper = document.querySelector(".gallery")!;
-  const grid = document.querySelector("[data-grid-first]")!;
-  const gridImages = grid.querySelectorAll(".gallery__grid__img");
+  const section = document.querySelector(".gallery")!;
+  const gridImages = document.querySelectorAll(".gallery__grid__img");
 
   gsap
     .timeline({
@@ -65,17 +88,38 @@ const animateGalleryGrid = () => {
         ease: "sine",
       },
       scrollTrigger: {
-        trigger: wrapper,
+        trigger: section,
         start: "top top",
         end: "+=250%",
-        pin: wrapper as HTMLElement,
+        pin: section as HTMLElement,
         scrub: 0.5,
-        markers: true,
       },
     })
     .from(gridImages, {
       stagger: 0.07,
       y: () => gsap.utils.random(window.innerHeight, window.innerHeight * 1.8),
+    });
+};
+
+const animateContactGallery = () => {
+  const section = document.querySelector(".contact")!;
+  const galleryImages = document.querySelectorAll(".contact__gallery__img");
+
+  gsap
+    .timeline({
+      defaults: { ease: "power2.out" },
+      scrollTrigger: {
+        trigger: section,
+        start: "top 25%",
+        toggleActions: "play reverse play reverse",
+      },
+    })
+    .from(galleryImages, {
+      stagger: 0.1,
+      y: 400,
+      rotation: () => gsap.utils.random(-15, 15),
+      opacity: 0,
+      duration: 0.4,
     });
 };
 
@@ -139,6 +183,8 @@ window.addEventListener("load", () => {
 
     backgroundImageReel();
     animateHero();
+    animatePortfolioList();
     animateGalleryGrid();
+    animateContactGallery();
   });
 });
