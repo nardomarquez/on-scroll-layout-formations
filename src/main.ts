@@ -7,7 +7,20 @@ import { imageLoaded } from "./lib/utils";
 gsap.registerPlugin(ScrollTrigger);
 
 const lenis = new Lenis();
-lenis.on("scroll", ScrollTrigger.update);
+
+let currentScroll = 0;
+lenis.on("scroll", (lenis) => {
+  currentScroll = lenis.scroll;
+
+  let previousScroll = 0;
+  if (currentScroll !== previousScroll) {
+    animateAboutThumbnails();
+    animateServicesThumbnails();
+    previousScroll = currentScroll;
+  }
+
+  ScrollTrigger.update();
+});
 gsap.ticker.add((time) => {
   lenis.raf(time * 1000);
 });
@@ -52,6 +65,35 @@ const animateHero = () => {
     },
     yPercent: 100,
   });
+};
+
+const animateThumbnails = (thumbnails: NodeListOf<Element>) => {
+  const scrollUnit = 150;
+  const thumbnailsLength = thumbnails.length;
+
+  const currentIndex =
+    Math.floor(currentScroll / scrollUnit) % thumbnailsLength;
+
+  // Remove 'thumbnail-visible' class from all thumbnails
+  thumbnails.forEach((thumbnail) => {
+    thumbnail.classList.remove("thumbnail-visible");
+  });
+
+  // Add 'thumbnail-visible' class only to the current thumbnail
+  const currentThumbnail = thumbnails[currentIndex];
+  currentThumbnail.classList.add("thumbnail-visible");
+
+  console.log(thumbnails);
+};
+
+const animateAboutThumbnails = () => {
+  const thumbnails = document.querySelectorAll(".about__thumbnail");
+  animateThumbnails(thumbnails);
+};
+
+const animateServicesThumbnails = () => {
+  const thumbnails = document.querySelectorAll(".services__thumbnail");
+  animateThumbnails(thumbnails);
 };
 
 const animateGalleryGrid = () => {
