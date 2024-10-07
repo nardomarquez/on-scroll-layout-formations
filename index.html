@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="https://use.typekit.net/bnr0wxc.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + TS</title>
   </head>
@@ -15,69 +16,96 @@
               <p>Clara Müller</p>
             </a>
 
+            <div class="header__contact header__menu__item">
+              <p>Contact</p>
+              <a class="header__contact__link" href="mailto:hello@claramueller.com">hello@claramueller.com</a>
+            </div>
+
             <ul class="header__menu">
-              <li><a href="#about">About</a></li>
-              <li><a href="#portfolio">Portfolio</a></li>
-              <li><a href="#gallery">Gallery</a></li>
+              <li class="header__menu__item"><a href="#about">About</a></li>
+              <li class="header__menu__item"><a href="#portfolio">Portfolio</a></li>
+              <li class="header__menu__item"><a href="#gallery">Gallery</a></li>
             </ul>
           </nav>
         </header>
 
-        <section id="hero" class="hero content content--full">
-          <h1 class="hero__title justified-text">Clara Müller</h1>
+        <section id="hero" class="hero content">
+          <div class="hero__wrapper content--full">
+            <h1 class="hero__title"><span>Clara</span> <span>Müller</span></h1>
+          </div>
         </section>
 
         <section id="about" class="about content">
           <div class="about__wrapper">
             <h2 class="section__title">About</h2>
 
-            <p class="about__desc indented">
-              I'm all about capturing moments that break the mold. My photography is raw,
-              unapologetic, and a little offbeat—just like life. I thrive on the imperfect, the
-              in-between, and the unexpected. Whether I'm shooting for a brand, a portrait, or
-              creating my own art, I aim to push boundaries and provoke thought. Photography is my
-              way of challenging the status quo and turning everyday moments into bold statements.
-            </p>
+            <div class="about__content">
+              <div class="about__thumbnails">
+                <img src="images/24.jpg" class="about__thumbnail" />
+                <img src="images/25.jpg" class="about__thumbnail" />
+                <img src="images/26.jpg" class="about__thumbnail" />
+                <img src="images/27.jpg" class="about__thumbnail" />
+                <img src="images/28.jpg" class="about__thumbnail" />
+              </div>
+
+              <p class="about__desc indented">
+                I'm all about capturing moments that break the mold. My photography is raw,
+                unapologetic, and a little offbeat—just like life. I thrive on the imperfect, the
+                in-between, and the unexpected. Whether I'm shooting for a brand, a portrait, or
+                creating my own art, I aim to push boundaries and provoke thought. Photography is my
+                way of challenging the status quo and turning everyday moments into bold statements.
+              </p>
+            </div>
+
+            <div class="about__location">
+              <p class="about__location__city">Based in Berlin</p>
+              <p class="about__location__coords">52.52, 13.405</p>
+            </div>
           </div>
         </section>
 
         <section id="portfolio" class="portfolio content">
           <div class="portfolio__wrapper">
-            <h2 class="section__title">Works</h2>
+            <h2 class="section__title portfolio__title">Works</h2>
 
             <ul class="portfolio__list">
               <li class="portfolio__item">
                 <article class="portfolio__item__wrapper">
-                  <img src="images/2.jpg" alt="Portfolio item 1" class="portfolio__item__image" />
-                  <h3 class="portfolio__item__title">Item 1</h3>
+                  <img src="images/23.jpg" alt="Urban Dystopia" class="portfolio__item__image" />
+                  <h3 class="portfolio__item__title">Metallic Stacks</h3>
+                  <p class="portfolio__item__location">2023</p>
                 </article>
               </li>
 
               <li class="portfolio__item">
                 <article class="portfolio__item__wrapper">
-                  <img src="images/1.jpg" alt="Portfolio item 2" class="portfolio__item__image" />
-                  <h3 class="portfolio__item__title">Item 2</h3>
+                  <img src="images/1.jpg" alt="Neon Nightmares" class="portfolio__item__image" />
+                  <h3 class="portfolio__item__title">Stiletto Dreams</h3>
+                  <p class="portfolio__item__location">2022</p>
                 </article>
               </li>
 
               <li class="portfolio__item">
                 <article class="portfolio__item__wrapper">
-                  <img src="images/10.jpg" alt="Portfolio item 3" class="portfolio__item__image" />
-                  <h3 class="portfolio__item__title">Item 3</h3>
+                  <img src="images/10.jpg" alt="Concrete Jungle Fever" class="portfolio__item__image" />
+                  <h3 class="portfolio__item__title">Synthetic Silhouette</h3>
+                  <p class="portfolio__item__location">2021</p>
                 </article>
               </li>
 
               <li class="portfolio__item">
                 <article class="portfolio__item__wrapper">
-                  <img src="images/9.jpg" alt="Portfolio item 4" class="portfolio__item__image" />
-                  <h3 class="portfolio__item__title">Item 4</h3>
+                  <img src="images/14.jpg" alt="Cyberpunk Wasteland" class="portfolio__item__image" />
+                  <h3 class="portfolio__item__title">Floral Velocity</h3>
+                  <p class="portfolio__item__location">2020</p>
                 </article>
               </li>
               
               <li class="portfolio__item">
                 <article class="portfolio__item__wrapper">
-                  <img src="images/2.jpg" class="portfolio__item__image" alt="Portfolio item 5" />
-                  <h3 class="portfolio__item__title">Item 5</h3>
+                  <img src="images/2.jpg" class="portfolio__item__image" alt="Analog Rebellion" />
+                  <h3 class="portfolio__item__title">Sweet Nostalgia</h3>
+                  <p class="portfolio__item__location">2019</p>
                 </article>
               </li>
             </ul>
@@ -88,64 +116,106 @@
           <div class="services__wrapper">
             <h2 class="section__title">Services</h2>
 
-            <ul class="services__list">
-              <li class="service__item">
-                <h3>Visual Stories</h3>
-                <p>
-                  Capture moments that matter. We turn your vision into striking imagery that
-                  resonates beyond the frame.
-                </p>
-              </li>
+            <div class="services__content">   
+              <ul class="services__list">
+                <li class="service__item">
+                  <h3 class="service__item__title">Visual Stories</h3>
+                </li>
 
-              <li class="service__item">
-                <h3>Brand Identity</h3>
-                <p>
-                  Elevate your brand with photos that communicate your edge, voice, and vibe—distinct,
-                  powerful, and unforgettable.
-                </p>
-              </li>
+                <li class="service__item">
+                  <h3 class="service__item__title">Brand Identity</h3>
+                </li>
 
-              <li class="service__item">
-                <h3>Editorial Edge</h3>
-                <p>
-                  Dynamic photography for editorials that push boundaries and challenge the status
-                  quo, ensuring your content stands out.
-                </p>
-              </li>
-            </ul>
+                <li class="service__item">
+                  <h3 class="service__item__title">Editorial Edge</h3>
+                </li>
+              </ul>
+
+              <div class="services__thumbnail">
+                <img src="images/23.jpg" class="services__thumbnail__image" />
+                <img src="images/7.jpg" class="services__thumbnail__image" />
+                <img src="images/31.jpg" class="services__thumbnail__image" />
+                <img src="images/15.jpg" class="services__thumbnail__image" />
+                <img src="images/39.jpg" class="services__thumbnail__image" />
+                <img src="images/2.jpg" class="services__thumbnail__image" />
+              </div>
+            </div>
           </div>
         </section>
 
-        <section id="gallery" class="gallery content">
+        <section id="gallery" class="gallery">
           <div class="gallery__wrapper">
-            <h2 class="section__title">Gallery</h2>
+            <h2 class="section__title gallery__title">Gallery</h2>
           
-            <div class="gallery__grid" data-grid-first>
-              <div class="gallery__grid__img pos-1" style="background-image:url(images/39.jpg)"></div>
-              <div class="gallery__grid__img pos-2" style="background-image:url(images/38.jpg)"></div>
-              <div class="gallery__grid__img pos-3" style="background-image:url(images/37.jpg)"></div>
-              <div class="gallery__grid__img pos-4" style="background-image:url(images/36.jpg)"></div>
-              <div class="gallery__grid__img pos-5" style="background-image:url(images/35.jpg)"></div>
-              <div class="gallery__grid__img pos-6" style="background-image:url(images/6.jpg)"></div>
-              <div class="gallery__grid__img pos-7" style="background-image:url(images/7.jpg)"></div>
-              <div class="gallery__grid__img pos-8" style="background-image:url(images/8.jpg)"></div>
-              <div class="gallery__grid__img pos-9" style="background-image:url(images/9.jpg)"></div>
-              <div class="gallery__grid__img pos-10" style="background-image:url(images/1.jpg)"></div>
-              <div class="gallery__grid__img pos-11" style="background-image:url(images/11.jpg)"></div>
-              <div class="gallery__grid__img pos-12" style="background-image:url(images/3.jpg)"></div>
-              <div class="gallery__grid__img pos-13" style="background-image:url(images/4.jpg)"></div>
-              <div class="gallery__grid__img pos-14" style="background-image:url(images/5.jpg)"></div>
-              <div class="gallery__grid__img pos-15" style="background-image:url(images/18.jpg)"></div>
-              <div class="gallery__grid__img pos-16" style="background-image:url(images/16.jpg)"></div>
-              <div class="gallery__grid__img pos-17" style="background-image:url(images/17.jpg)"></div>
+            <div class="gallery__grid">
+              <div class="gallery__grid__column col-1">
+                <div class="gallery__grid__img" style="background-image:url(images/23.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/7.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/31.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/15.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/39.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/2.jpg)"></div>
+              </div>
+              <div class="gallery__grid__column col-2">
+                <div class="gallery__grid__img" style="background-image:url(images/18.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/36.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/4.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/27.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/11.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/33.jpg)"></div>
+              </div>
+              <div class="gallery__grid__column col-3">
+                <div class="gallery__grid__img" style="background-image:url(images/9.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/25.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/38.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/1.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/20.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/13.jpg)"></div>
+              </div>
+              <div class="gallery__grid__column col-4">
+                <div class="gallery__grid__img" style="background-image:url(images/30.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/6.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/22.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/35.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/14.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/28.jpg)"></div>
+              </div>
+              <div class="gallery__grid__column col-5">
+                <div class="gallery__grid__img" style="background-image:url(images/26.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/40.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/3.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/32.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/17.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/10.jpg)"></div>
+              </div>
+              <div class="gallery__grid__column col-6">
+                <div class="gallery__grid__img" style="background-image:url(images/37.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/29.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/12.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/5.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/8.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/19.jpg)"></div>
+              </div>
+              <div class="gallery__grid__column col-7">
+                <div class="gallery__grid__img" style="background-image:url(images/39.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/16.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/7.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/34.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/24.jpg)"></div>
+                <div class="gallery__grid__img" style="background-image:url(images/21.jpg)"></div>
+              </div>
+              </div>
             </div>
           </div>
         </section>
 
         <section id="contact" class="contact">
           <div class="contact__wrapper">
-            <h2 class="section__title">Contact</h2>
-            <h3 class="contact__cta justified-text">Let's work</h3>
+            <h2 class="section__title contact__title">Contact</h2>
+            <h3 class="contact__cta">
+              <span>Let's</span>
+              <span>work</span>
+            </h3>
 
             <div class="contact__gallery">
               <div class="contact__gallery__img" style="background-image:url(images/1.jpg)"></div>
@@ -157,7 +227,6 @@
               <div class="contact__gallery__img" style="background-image:url(images/7.jpg)"></div>
             </div>
 
-            <button class="contact__button">Contact</button>
           </div>
         </section>
       </main>

@@ -54,33 +54,14 @@ const animateHero = () => {
   });
 };
 
-const animatePortfolioList = () => {
-  const section = document.querySelector(".portfolio")!;
-  const portfolioItems = document.querySelectorAll(".portfolio__item");
-
-  gsap
-    .timeline({
-      defaults: { ease: "power3" },
-      scrollTrigger: {
-        trigger: section,
-        start: "top top",
-        end: "+=200%",
-        pin: section as HTMLElement,
-        scrub: 0.5,
-      },
-    })
-    .from(portfolioItems, {
-      y: window.innerHeight,
-      stagger: {
-        from: "center",
-        each: 0.05,
-      },
-    });
-};
-
 const animateGalleryGrid = () => {
   const section = document.querySelector(".gallery")!;
-  const gridImages = document.querySelectorAll(".gallery__grid__img");
+  const gridColumnsOdd = document.querySelectorAll(
+    ".gallery__grid__column:nth-child(odd)"
+  );
+  const gridColumnsEven = document.querySelectorAll(
+    ".gallery__grid__column:nth-child(even)"
+  );
 
   gsap
     .timeline({
@@ -89,16 +70,20 @@ const animateGalleryGrid = () => {
       },
       scrollTrigger: {
         trigger: section,
-        start: "top top",
-        end: "+=250%",
-        pin: section as HTMLElement,
+        start: "top bottom",
         scrub: 0.5,
       },
     })
-    .from(gridImages, {
-      stagger: 0.07,
-      y: () => gsap.utils.random(window.innerHeight, window.innerHeight * 1.8),
-    });
+    .to(gridColumnsEven, {
+      y: 10,
+    })
+    .to(
+      gridColumnsOdd,
+      {
+        y: -10,
+      },
+      "<"
+    );
 };
 
 const animateContactGallery = () => {
@@ -183,7 +168,6 @@ window.addEventListener("load", () => {
 
     backgroundImageReel();
     animateHero();
-    animatePortfolioList();
     animateGalleryGrid();
     animateContactGallery();
   });
