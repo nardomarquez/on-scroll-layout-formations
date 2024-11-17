@@ -4,9 +4,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-* {
   margin: 0;
   padding: 0;
 }
@@ -36,15 +33,15 @@ img {
   height: auto;
 }
 
-.header__menu ol {
+ol {
   counter-reset: menu-counter 0;
 }
 
-.header__menu li {
+ol li {
   counter-increment: menu-counter;
 }
 
-.header__menu li::marker {
+ol li::marker {
   content: counter(menu-counter) "    ";
 }
 
@@ -61,15 +58,14 @@ a {
 
 /* components */
 .header {
-  color: var(--color-red);
   position: fixed;
   top: 0;
   inset-inline: 0;
   z-index: 10;
   padding: 2rem;
-
   display: grid;
   grid-template-columns: 1fr 1fr;
+  color: var(--color-red);
 }
 
 .header__nav {
@@ -88,9 +84,6 @@ a {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-}
-
-.header__menu__item {
 }
 
 .header__contact__link {
@@ -124,9 +117,6 @@ a {
   width: 100%;
   justify-content: center;
   gap: 8rem;
-
-  width: 100%;
-
   font-family: "PP Mondwest", serif;
   font-size: 8rem;
   font-weight: 700;
@@ -181,7 +171,6 @@ a {
 }
 
 .indented {
-  margin: 0;
   overflow: hidden;
 }
 
@@ -227,21 +216,14 @@ a {
 
 .works__item__wrapper {
   padding: var(--padding-section);
-
   position: relative;
   height: 960px;
-
   display: grid;
   grid-template-columns: 1fr 1fr;
-
   color: var(--color-red);
 }
 
-.works__item__title {
-  position: relative;
-  font-size: 1rem;
-}
-
+.works__item__title,
 .works__item__location {
   position: relative;
   font-size: 1rem;
@@ -275,36 +257,45 @@ a {
   margin-top: 4rem;
 }
 
+.expertise__content__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .expertise__desc {
-  max-width: 40ch;
+  max-width: 400px;
   text-wrap: pretty;
   text-align: justify;
+  text-transform: none;
 }
 
 .expertise__list {
-  display: flex;
-  flex-direction: column;
-  align-self: flex-end;
+  list-style-position: inside;
 }
 
-.service__item {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 1rem;
+.expertise__item {
   color: var(--color-red);
 }
 
-.service__item__title {
+.expertise__item::marker {
+  padding-right: 1rem;
+}
+
+.expertise__item__title {
   margin: 0;
   letter-spacing: -0.025rem;
+  font-size: 1rem;
+  display: inline;
 }
 
 .expertise__thumbnails {
-  grid-column: 2 / -1;
-  position: relative;
-  height: 350px;
-  width: 250px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 64px;
+  height: 450px;
+  width: 350px;
   justify-self: center;
   align-self: center;
 }
@@ -438,7 +429,6 @@ a {
   display: inline-flex;
   width: 100%;
   justify-content: space-between;
-  width: 100%;
   font-family: "PP Mondwest", sans-serif;
   text-transform: none;
   font-size: 9rem;
