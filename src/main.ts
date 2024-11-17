@@ -15,7 +15,7 @@ lenis.on("scroll", (lenis) => {
   let previousScroll = 0;
   if (currentScroll !== previousScroll) {
     animateAboutThumbnails();
-    animateServicesThumbnails();
+    animateExpertiseThumbnails();
     previousScroll = currentScroll;
   }
 
@@ -91,8 +91,8 @@ const animateAboutThumbnails = () => {
   animateThumbnails(thumbnails);
 };
 
-const animateServicesThumbnails = () => {
-  const thumbnails = document.querySelectorAll(".services__thumbnail");
+const animateExpertiseThumbnails = () => {
+  const thumbnails = document.querySelectorAll(".expertise__thumbnail");
   animateThumbnails(thumbnails);
 };
 
