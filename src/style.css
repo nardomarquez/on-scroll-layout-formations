@@ -18,7 +18,7 @@
   line-height: 1.5;
   letter-spacing: 0.025rem;
 
-  --color-red: #d91111;
+  --color-red: #ff0b0b;
   --color-gray: #e1e5d5;
   --color-ivory: #efecdd;
   --color-gray-dark: #232020;
@@ -116,6 +116,7 @@ a {
 }
 
 .hero__title {
+  position: relative;
   display: inline-flex;
   width: 100%;
   justify-content: space-between;
