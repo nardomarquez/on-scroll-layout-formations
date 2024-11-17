@@ -257,12 +257,29 @@ a {
 .services__content {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  height: 100%;
+}
+
+.services__content__text {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: 4rem;
+}
+
+.services__desc {
+  max-width: 40ch;
+  text-wrap: pretty;
+  text-align: justify;
 }
 
 .services__list {
   grid-column: 1 / 2;
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-self: flex-end;
+  line-height: 1.2;
 }
 
 .service__item {
@@ -274,8 +291,11 @@ a {
 }
 
 .service__item__title {
-  font-size: 0.875rem;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-size: 2rem;
+  margin: 0;
   font-weight: 500;
+  letter-spacing: -0.025rem;
 }
 
 .services__thumbnails {
